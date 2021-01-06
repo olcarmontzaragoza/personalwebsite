@@ -7,7 +7,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -941,7 +941,7 @@ body.offcanvas {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #2c98f0;
+    background: rgba(44, 152, 240, 0.5);
     opacity: 0;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -950,7 +950,10 @@ body.offcanvas {
       padding: 20px;
       display: block;
       position: relative;
-      height: 300px; }
+      height: 300px;
+
+
+    }
       .project .desc .con .icon {
         position: absolute;
         bottom: 20px;
