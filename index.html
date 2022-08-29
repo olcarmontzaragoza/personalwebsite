@@ -184,7 +184,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
 								</span>
                                             <div class="desc">
                                                 <h3>Full-Stack</h3>
-                                                <p>Entering new realms to discover how best to make a difference in this world.</p>
+                                                <p>Full-Stack is my main expertise. I've developed it through side projects and internships.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
 								</span>
                                             <div class="desc">
                                                 <h3>UI Design</h3>
-                                                <p>The greatest art never fully appreciated, I've been fanatical about mastering it.</p>
+                                                <p>I've become skilled using a range of CSS libraries and web design tools.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -205,8 +205,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
 									<i class="icon-phone3"></i>
 								</span>
                                             <div class="desc">
-                                                <h3>Python</h3>
-                                                <p>An art I've tried masterin from scratch, it's the most valuable trait a company can have.</p>
+                                                <h3>Python, after JavaScript, has become my second-strongest programming language.</h3>
+                                                <p></p>
                                             </div>
                                         </div>
                                     </div>
@@ -242,7 +242,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                                     <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                         <div class="hire">
                                             <h2>Download My Resume!</h2>
-                                            <a href="#contact" data-nav-section="contact" class="btn-hire">Download >>></a>
+                                            <a href="#contact" data-nav-section="contact" class="btn-hire"><a href="/images/Oliver-Carmont-CV.pdf" download>Download >>></a></a>
                                         </div>
                                     </div>
                                 </div>
@@ -250,6 +250,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                         </div>
                     </div>
                 </section>
+
 
                 <!--<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
                     <div class="overlay"></div>
@@ -277,6 +278,49 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                     </div>
                 </div>-->
 
+                <script>
+                    document.getElementById("startups-button").addEventListener("click", changeActiveLink(1));
+                    document.getElementById("projects-button").addEventListener("click", changeActiveLink(2));
+                    document.getElementById("designs-button").addEventListener("click", changeActiveLink(3));
+                    document.getElementById("other-button").addEventListener("click", changeActiveLink(4));
+
+                    function changeActiveLink(id) {
+                        if (id == 1) {
+                            document.getElementById("startups-button").classList.add("active");
+                            document.getElementById("projects-button").classList.remove("active");
+                            document.getElementById("designs-button").classList.remove("active");
+                            document.getElementById("other-button").classList.remove("active");
+
+                        } else if (id == 2) {
+                            document.getElementById("startups-button").classList.remove("active");
+                            document.getElementById("projects-button").classList.add("active");
+                            document.getElementById("designs-button").classList.remove("active");
+                            document.getElementById("other-button").classList.remove("active");
+                        } else if (id == 3) {
+                            document.getElementById("startups-button").classList.remove("active");
+                            document.getElementById("projects-button").classList.remove("active");
+                            document.getElementById("designs-button").classList.add("active");
+                            document.getElementById("other-button").classList.remove("active");
+                        } else {
+                            document.getElementById("startups-button").classList.remove("active");
+                            document.getElementById("projects-button").classList.remove("active");
+                            document.getElementById("designs-button").classList.remove("active");
+                            document.getElementById("other-button").classList.add("active");
+                        }
+                    }
+                </script>
+
+                <style>
+                    .non-active {
+                        color: #aaa;
+                        cursor: pointer;
+                    }
+                    
+                    .active {
+                        cursor: default;
+                    }
+                </style>
+
                 <section class="colorlib-work" data-section="work" id="work">
                     <div class="colorlib-narrow-content">
                         <div class="row">
@@ -287,7 +331,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                         </div>
                         <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                             <div class="col-md-12">
-                                <p class="work-menu"><span><a href="" class="active">Startups</a></span> <span><a style="color:#aaa">Projects</a></span> <span><a style="color:#aaa">Designs</a></span> <span><a style="color:#aaa">Other</a></span></p>
+                                <p class="work-menu"><span><a href="" id="startups-button" class="active">Startups</a></span> <span><a id="projects-button">Projects</a></span> <span><a id="designs-button">Designs</a></span> <span><a id="other-button">Other</a></span></p>
                             </div>
                         </div>
                         <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
