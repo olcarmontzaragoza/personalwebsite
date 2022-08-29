@@ -66,6 +66,44 @@
         })();
     </script>
 
+    <script>
+        document.getElementById("startups-button").addEventListener("click", changeActiveLink(1));
+        document.getElementById("projects-button").addEventListener("click", changeActiveLink(2));
+        document.getElementById("designs-button").addEventListener("click", changeActiveLink(3));
+        document.getElementById("other-button").addEventListener("click", changeActiveLink(4));
+
+        function changeActiveLink(id) {
+            alert('clicked!')
+            if (id == 1) {
+                document.getElementById("startups-button").classList.add("active");
+                document.getElementById("projects-button").classList.remove("active");
+                document.getElementById("designs-button").classList.remove("active");
+                document.getElementById("other-button").classList.remove("active");
+
+                document.getElementById("startups-button").classList.add("non-active");
+                document.getElementById("projects-button").classList.remove("non-active");
+                document.getElementById("designs-button").classList.remove("non-active");
+                document.getElementById("other-button").classList.remove("non-active");
+
+            } else if (id == 2) {
+                document.getElementById("startups-button").classList.remove("active");
+                document.getElementById("projects-button").classList.add("active");
+                document.getElementById("designs-button").classList.remove("active");
+                document.getElementById("other-button").classList.remove("active");
+            } else if (id == 3) {
+                document.getElementById("startups-button").classList.remove("active");
+                document.getElementById("projects-button").classList.remove("active");
+                document.getElementById("designs-button").classList.add("active");
+                document.getElementById("other-button").classList.remove("active");
+            } else {
+                document.getElementById("startups-button").classList.remove("active");
+                document.getElementById("projects-button").classList.remove("active");
+                document.getElementById("designs-button").classList.remove("active");
+                document.getElementById("other-button").classList.add("active");
+            }
+        }
+    </script>
+
 </head>
 
 <body>
@@ -278,8 +316,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                     </div>
                 </div>-->
 
-                <script>
-                </script>
+
 
                 <style>
                     .non-active {
