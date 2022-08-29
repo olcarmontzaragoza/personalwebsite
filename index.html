@@ -291,6 +291,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                             document.getElementById("designs-button").classList.remove("active");
                             document.getElementById("other-button").classList.remove("active");
 
+                            document.getElementById("startups-button").classList.add("non-active");
+                            document.getElementById("projects-button").classList.remove("non-active");
+                            document.getElementById("designs-button").classList.remove("non-active");
+                            document.getElementById("other-button").classList.remove("non-active");
+
                         } else if (id == 2) {
                             document.getElementById("startups-button").classList.remove("active");
                             document.getElementById("projects-button").classList.add("active");
