@@ -86,24 +86,24 @@
         function clickStartupButton() {
             document.getElementById("startups-button").classList.add("active");
             document.getElementById("internships-button").classList.remove("active");
-            document.getElementById("designs-button").classList.remove("active");
+            document.getElementById("hackathons-button").classList.remove("active");
             document.getElementById("projects-button").classList.remove("active");
 
             document.getElementById("startups-button").classList.remove("non-active");
             document.getElementById("internships-button").classList.add("non-active");
-            document.getElementById("designs-button").classList.add("non-active");
+            document.getElementById("hackathons-button").classList.add("non-active");
             document.getElementById("projects-button").classList.add("non-active");
         }
 
         function clickInternshipsButton() {
             document.getElementById("startups-button").classList.remove("active");
             document.getElementById("internships-button").classList.add("active");
-            document.getElementById("designs-button").classList.remove("active");
+            document.getElementById("hackathons-button").classList.remove("active");
             document.getElementById("projects-button").classList.remove("active");
 
             document.getElementById("startups-button").classList.add("non-active");
             document.getElementById("internships-button").classList.remove("non-active");
-            document.getElementById("designs-button").classList.add("non-active");
+            document.getElementById("hackathons-button").classList.add("non-active");
             document.getElementById("projects-button").classList.add("non-active");
 
             document.getElementById("netzero_box").style.display = "block";
@@ -112,27 +112,27 @@
             document.getElementById("open_database").style.display = "hidden";
         }
 
-        function clickDesignsButton() {
+        function clickHackathonsButton() {
             document.getElementById("startups-button").classList.remove("active");
             document.getElementById("internships-button").classList.remove("active");
-            document.getElementById("designs-button").classList.add("active");
+            document.getElementById("hackathons-button").classList.add("active");
             document.getElementById("projects-button").classList.remove("active");
 
             document.getElementById("startups-button").classList.add("non-active");
             document.getElementById("internships-button").classList.add("non-active");
-            document.getElementById("designs-button").classList.remove("non-active");
+            document.getElementById("hackathons-button").classList.remove("non-active");
             document.getElementById("projects-button").classList.add("non-active");
         }
 
         function clickProjectsButton() {
             document.getElementById("startups-button").classList.remove("active");
             document.getElementById("internships-button").classList.remove("active");
-            document.getElementById("designs-button").classList.remove("active");
+            document.getElementById("hackathons-button").classList.remove("active");
             document.getElementById("projects-button").classList.add("active");
 
             document.getElementById("startups-button").classList.add("non-active");
             document.getElementById("internships-button").classList.add("non-active");
-            document.getElementById("designs-button").classList.add("non-active");
+            document.getElementById("hackathons-button").classList.add("non-active");
             document.getElementById("projects-button").classList.remove("non-active");
         }
     </script>
@@ -362,7 +362,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                         </div>
                         <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                             <div class="col-md-12">
-                                <p class="work-menu"><span><a id="startups-button" class="active" onclick="clickStartupButton();">Startups</a></span> <span><a id="internships-button" class="non-active" onclick="clickProjectsButton();">Internships</a></span> <span><a id="hackathons-button" class="non-active" onclick="clickHackathonsButton();">Hackathons</a></span><span><a id="projects-button" class="non-active" onclick="clickProjectsButton();">Projects</a></span></p>
+                                <p class="work-menu"><span><a id="startups-button" class="active" onclick="clickStartupButton();">Startups</a></span> <span><a id="internships-button" class="non-active" onclick="clickInternshipsButton();">Internships</a></span> <span><a id="hackathons-button" class="non-active" onclick="clickHackathonsButton();">Hackathons</a></span><span><a id="projects-button" class="non-active" onclick="clickProjectsButton();">Projects</a></span></p>
                             </div>
                         </div>
 
