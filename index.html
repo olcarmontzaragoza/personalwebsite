@@ -76,23 +76,17 @@
             cursor: default;
             color: #2c98f0 !important;
         }
-        /* #netzero_box {
-            display: none !important;
+        
+        #netzero_box {
+            display: none;
         }
         
         #netzero_world {
-            display: none !important;
-        } */
+            display: none;
+        }
     </style>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("netzero_box").style.display = "none";
-            document.getElementById("netzero_world").style.display = "none";
-        });
-
-
-
         function clickStartupButton() {
             document.getElementById("startups-button").classList.add("active");
             document.getElementById("internships-button").classList.remove("active");
@@ -137,6 +131,11 @@
             document.getElementById("internships-button").classList.add("non-active");
             document.getElementById("hackathons-button").classList.remove("non-active");
             document.getElementById("projects-button").classList.add("non-active");
+
+            document.getElementById("netzero_box").style.display = "none";
+            document.getElementById("carbonly_box").style.display = "none";
+            document.getElementById("netzero_world").style.display = "none";
+            document.getElementById("open_database").style.display = "none";
         }
 
         function clickProjectsButton() {
@@ -149,6 +148,11 @@
             document.getElementById("internships-button").classList.add("non-active");
             document.getElementById("hackathons-button").classList.add("non-active");
             document.getElementById("projects-button").classList.remove("non-active");
+
+            document.getElementById("netzero_box").style.display = "none";
+            document.getElementById("carbonly_box").style.display = "none";
+            document.getElementById("netzero_world").style.display = "none";
+            document.getElementById("open_database").style.display = "none";
         }
     </script>
 
