@@ -97,6 +97,11 @@
             document.getElementById("internships-button").classList.add("non-active");
             document.getElementById("hackathons-button").classList.add("non-active");
             document.getElementById("projects-button").classList.add("non-active");
+
+            document.getElementById("netzero_box").style.display = "none";
+            document.getElementById("carbonly_box").style.display = "inline";
+            document.getElementById("netzero_world").style.display = "none";
+            document.getElementById("open_database").style.display = "inline";
         }
 
         function clickInternshipsButton() {
@@ -394,8 +399,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                             </div>
                         </div>
 
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-                            <div id="netzero_box" class="project" style="background-image: url(images/img-4.jpg); border-radius:10px;">
+                        <div id="netzero_box" class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+                            <div class="project" style="background-image: url(images/img-4.jpg); border-radius:10px;">
                                 <div class="desc">
                                     <div class="con">
                                         <h3><a href="https://netzero.world/">NetZero App</a></h3>
@@ -414,8 +419,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                             </div>
                         </div>
 
-                        <div id="netzero_world" class="row" style="border-radius:10px;">
-                            <a href="https://app.netzero.world/checkout.html">
+                        <div class="row" style="border-radius:10px;">
+                            <a id="netzero_world" href="https://app.netzero.world/checkout.html">
                                 <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" style="border-radius:10px;">
                                     <div class="project" style="background-image: url(images/img-1.jpg); border-radius:10px;">
                                         <div class="desc">
