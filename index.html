@@ -131,7 +131,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                                                 <div class="desc">
                                                     <h1 style="color:#fff">Hi! <br>I'm Oliver</h1>
                                                     <h2 style="color:#fff">A UI/UX Designer in Berkeley</h2>
-                                                    <p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
+                                                    <!-- <p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p> -->
                                                     <p><a href="#work" class="btn btn-primary btn-learn" style="color:#fff; border-color:#fff">View Projects <i class="icon-briefcase3"></i></a></p>
                                                 </div>
                                             </div>
@@ -285,6 +285,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                     document.getElementById("other-button").addEventListener("click", changeActiveLink(4));
 
                     function changeActiveLink(id) {
+                        alert('clicked!')
                         if (id == 1) {
                             document.getElementById("startups-button").classList.add("active");
                             document.getElementById("projects-button").classList.remove("active");
@@ -338,7 +339,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                         </div>
                         <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                             <div class="col-md-12">
-                                <p class="work-menu"><span><a id="startups-button" class="active">Startups</a></span> <span><a id="projects-button" class="active">Projects</a></span> <span><a id="designs-button">Designs</a></span> <span><a id="other-button">Other</a></span></p>
+                                <p class="work-menu"><span><a id="startups-button" class="active">Startups</a></span> <span><a id="projects-button" class="non-active">Projects</a></span> <span><a id="designs-button">Designs</a></span> <span><a id="other-button">Other</a></span></p>
                             </div>
                         </div>
                         <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
