@@ -76,59 +76,64 @@
             cursor: default;
             color: #2c98f0 !important;
         }
+        
+        #netzero_box {
+            display: hidden;
+        }
     </style>
 
     <script>
         function clickStartupButton() {
             document.getElementById("startups-button").classList.add("active");
-            document.getElementById("projects-button").classList.remove("active");
+            document.getElementById("internships-button").classList.remove("active");
             document.getElementById("designs-button").classList.remove("active");
-            document.getElementById("other-button").classList.remove("active");
+            document.getElementById("projects-button").classList.remove("active");
 
             document.getElementById("startups-button").classList.remove("non-active");
-            document.getElementById("projects-button").classList.add("non-active");
+            document.getElementById("internships-button").classList.add("non-active");
             document.getElementById("designs-button").classList.add("non-active");
-            document.getElementById("other-button").classList.add("non-active");
+            document.getElementById("projects-button").classList.add("non-active");
+        }
+
+        function clickInternshipsButton() {
+            document.getElementById("startups-button").classList.remove("active");
+            document.getElementById("internships-button").classList.add("active");
+            document.getElementById("designs-button").classList.remove("active");
+            document.getElementById("projects-button").classList.remove("active");
+
+            document.getElementById("startups-button").classList.add("non-active");
+            document.getElementById("internships-button").classList.remove("non-active");
+            document.getElementById("designs-button").classList.add("non-active");
+            document.getElementById("projects-button").classList.add("non-active");
+
+            document.getElementById("netzero_box").style.display = "block";
+            document.getElementById("carbonly_box").style.display = "hidden";
+            document.getElementById("netzero_world").style.display = "block";
+            document.getElementById("open_database").style.display = "hidden";
+        }
+
+        function clickDesignsButton() {
+            document.getElementById("startups-button").classList.remove("active");
+            document.getElementById("internships-button").classList.remove("active");
+            document.getElementById("designs-button").classList.add("active");
+            document.getElementById("projects-button").classList.remove("active");
+
+            document.getElementById("startups-button").classList.add("non-active");
+            document.getElementById("internships-button").classList.add("non-active");
+            document.getElementById("designs-button").classList.remove("non-active");
+            document.getElementById("projects-button").classList.add("non-active");
         }
 
         function clickProjectsButton() {
             document.getElementById("startups-button").classList.remove("active");
-            document.getElementById("projects-button").classList.add("active");
+            document.getElementById("internships-button").classList.remove("active");
             document.getElementById("designs-button").classList.remove("active");
-            document.getElementById("other-button").classList.remove("active");
+            document.getElementById("projects-button").classList.add("active");
 
             document.getElementById("startups-button").classList.add("non-active");
-            document.getElementById("projects-button").classList.remove("non-active");
+            document.getElementById("internships-button").classList.add("non-active");
             document.getElementById("designs-button").classList.add("non-active");
-            document.getElementById("other-button").classList.add("non-active");
-        }
-
-        document.getElementById("startups-button").addEventListener("click", changeActiveLink(1));
-        document.getElementById("projects-button").addEventListener("click", changeActiveLink(2));
-        document.getElementById("designs-button").addEventListener("click", changeActiveLink(3));
-        document.getElementById("other-button").addEventListener("click", changeActiveLink(4));
-
-        function changeActiveLink(id) {
-            alert('clicked!')
-            if (id == 1) {
-
-
-            } else if (id == 2) {
-                document.getElementById("startups-button").classList.remove("active");
-                document.getElementById("projects-button").classList.add("active");
-                document.getElementById("designs-button").classList.remove("active");
-                document.getElementById("other-button").classList.remove("active");
-            } else if (id == 3) {
-                document.getElementById("startups-button").classList.remove("active");
-                document.getElementById("projects-button").classList.remove("active");
-                document.getElementById("designs-button").classList.add("active");
-                document.getElementById("other-button").classList.remove("active");
-            } else {
-                document.getElementById("startups-button").classList.remove("active");
-                document.getElementById("projects-button").classList.remove("active");
-                document.getElementById("designs-button").classList.remove("active");
-                document.getElementById("other-button").classList.add("active");
-            }
+            document.getElementById("projects-button").classList.remove("non-active");
         }
     </script>
 
@@ -357,10 +362,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                         </div>
                         <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                             <div class="col-md-12">
-                                <p class="work-menu"><span><a id="startups-button" class="active" onclick="clickStartupButton();">Startups</a></span> <span><a id="projects-button" class="non-active" onclick="clickProjectsButton();">Projects</a></span> <span><a id="designs-button" class="non-active">Designs</a></span>                                    <span><a id="other-button" class="non-active">Other</a></span></p>
+                                <p class="work-menu"><span><a id="startups-button" class="active" onclick="clickStartupButton();">Startups</a></span> <span><a id="internships-button" class="non-active" onclick="clickProjectsButton();">Internships</a></span> <span><a id="hackathons-button" class="non-active" onclick="clickHackathonsButton();">Hackathons</a></span><span><a id="projects-button" class="non-active" onclick="clickProjectsButton();">Projects</a></span></p>
                             </div>
                         </div>
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+
+                        <div id="carbonly_box" class="col-md-6 animate-box" data-animate-effect="fadeInRight">
                             <div class="project" style="background-image: url(images/img-2.jpg); border-radius:10px;">
                                 <div class="desc">
                                     <div class="con">
@@ -383,7 +389,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                             </div>
                         </div>
 
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+                        <div id="netzero_box" class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
                             <div class="project" style="background-image: url(images/img-4.jpg); border-radius:10px;">
                                 <div class="desc">
                                     <div class="con">
@@ -403,7 +409,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                             </div>
                         </div>
 
-                        <div class="row" style="border-radius:10px;">
+                        <div id="netzero_world" class="row" style="border-radius:10px;">
                             <a href="https://app.netzero.world/checkout.html">
                                 <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" style="border-radius:10px;">
                                     <div class="project" style="background-image: url(images/img-1.jpg); border-radius:10px;">
@@ -425,7 +431,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                             </a>
                             </div>
 
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+                            <div id="open_database" class="col-md-6 animate-box" data-animate-effect="fadeInTop">
                                 <div class="project" style="background-image: url(images/img-3.jpg);border-radius:10px;">
                                     <div class="desc">
                                         <div class="con">
