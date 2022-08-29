@@ -74,13 +74,33 @@
         
         .active {
             cursor: default;
-            color: red !important;
+            color: #2c98f0 !important;
         }
     </style>
 
     <script>
-        function runfunc(id) {
-            alert(id)
+        function clickStartupButton() {
+            document.getElementById("startups-button").classList.add("active");
+            document.getElementById("projects-button").classList.remove("active");
+            document.getElementById("designs-button").classList.remove("active");
+            document.getElementById("other-button").classList.remove("active");
+
+            document.getElementById("startups-button").classList.remove("non-active");
+            document.getElementById("projects-button").classList.add("non-active");
+            document.getElementById("designs-button").classList.add("non-active");
+            document.getElementById("other-button").classList.add("non-active");
+        }
+
+        function clickProjectsButton() {
+            document.getElementById("startups-button").classList.remove("active");
+            document.getElementById("projects-button").classList.add("active");
+            document.getElementById("designs-button").classList.remove("active");
+            document.getElementById("other-button").classList.remove("active");
+
+            document.getElementById("startups-button").classList.add("non-active");
+            document.getElementById("projects-button").classList.remove("non-active");
+            document.getElementById("designs-button").classList.add("non-active");
+            document.getElementById("other-button").classList.add("non-active");
         }
 
         document.getElementById("startups-button").addEventListener("click", changeActiveLink(1));
@@ -91,15 +111,7 @@
         function changeActiveLink(id) {
             alert('clicked!')
             if (id == 1) {
-                document.getElementById("startups-button").classList.add("active");
-                document.getElementById("projects-button").classList.remove("active");
-                document.getElementById("designs-button").classList.remove("active");
-                document.getElementById("other-button").classList.remove("active");
 
-                document.getElementById("startups-button").classList.remove("non-active");
-                document.getElementById("projects-button").classList.add("non-active");
-                document.getElementById("designs-button").classList.add("non-active");
-                document.getElementById("other-button").classList.add("non-active");
 
             } else if (id == 2) {
                 document.getElementById("startups-button").classList.remove("active");
@@ -345,7 +357,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Olive
                         </div>
                         <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                             <div class="col-md-12">
-                                <p class="work-menu"><span><a id="startups-button" class="active" onclick="runfunc(1);">Startups</a></span> <span><a id="projects-button" class="non-active">Projects</a></span> <span><a id="designs-button" class="non-active">Designs</a></span>                                    <span><a id="other-button" class="non-active">Other</a></span></p>
+                                <p class="work-menu"><span><a id="startups-button" class="active" onclick="clickStartupButton();">Startups</a></span> <span><a id="projects-button" class="non-active" onclick="clickProjectsButton();">Projects</a></span> <span><a id="designs-button" class="non-active">Designs</a></span>                                    <span><a id="other-button" class="non-active">Other</a></span></p>
                             </div>
                         </div>
                         <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
