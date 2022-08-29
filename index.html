@@ -86,8 +86,12 @@
     </style>
 
     <script>
-        document.getElementById("netzero_box").style.display = "none";
-        document.getElementById("netzero_world").style.display = "none";
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("netzero_box").style.display = "none";
+            document.getElementById("netzero_world").style.display = "none";
+        });
+
+
 
         function clickStartupButton() {
             document.getElementById("startups-button").classList.add("active");
